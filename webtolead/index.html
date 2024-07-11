@@ -14,7 +14,7 @@
     <h1> Web to lead Mini Project </h1>
     
     <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DF9000001FFe3" 
-    method="POST" onsubmit="beforesubmit()">
+    method="POST" onsubmit="beforesubmit(event)">
     
     <input type=hidden name="oid" value="00DF9000001FFe3">
     <input type=hidden name="retURL" value="https://shreyashrepo.github.io/WEB-TO-LEAD-MAIN/webtolead/thanks.html">
@@ -38,7 +38,7 @@
     <input type="date" required="true" class="inputdate"/>
     <div class="g-recaptcha" 
     data-sitekey="6LcEqQ0qAAAAAOxSVEGin-PH-pi3sFzNEyRyT1vg"
-    data-callback="captchasuccess(event)"></div><br>
+    data-callback="captchasuccess()"></div><br>
 
     
     <input type="submit" name="submit" class="submit">
