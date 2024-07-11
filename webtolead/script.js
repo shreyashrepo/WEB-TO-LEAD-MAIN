@@ -13,8 +13,9 @@ function beforesubmit(event) {
 
         console.log("output date:", outputdate.value);
     } else {
-        alert("Please check the captcha box to generate the lead");
         event.preventDefault(); // Prevent form submission
+        alert("Please check the captcha box to generate the lead");
+       
     }
 }
 
