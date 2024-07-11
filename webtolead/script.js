@@ -1,6 +1,9 @@
 console.log("script inputed");
+let captchachecked=false;
 
-function beforesubmit(){
+
+function beforesubmit(event){
+if(captchachecked){
     let outputdate=document.querySelector(".outputdate");
     let inputdate=document.querySelector(".inputdate");
     console.log("check date:",inputdate.value); //string ---> date(en_IN)(locale);
@@ -9,6 +12,15 @@ function beforesubmit(){
     outputdate.value = formateddate;
 
     console.log("output date:",outputdate.value );
+
+}
+else{
+    alert("please check the captcha box to generate the lead");
+    event.preventDefault();
+
+}
+
+    
 }
 
  function timestamp() 
@@ -17,3 +29,8 @@ function beforesubmit(){
         elems["ts"] = JSON.stringify(new Date().getTime());
         document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems);
      } } setInterval(timestamp, 500); 
+
+     function captchasuccess(){
+        captchachecked=true;
+
+     }
