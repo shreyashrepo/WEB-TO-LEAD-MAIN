@@ -13,7 +13,7 @@ input,label{
     padding: 5px;
 }
 label{
-    color: blue;
+    color: black solid;
 }
 input{
     width: 100%;

@@ -1,4 +1,5 @@
 console.log("script inputed");
+
 let captchachecked = false;
 
 function beforesubmit(event) {
@@ -13,8 +14,9 @@ function beforesubmit(event) {
 
         console.log("output date:", outputdate.value);
     } else {
-        event.preventDefault(); // Prevent form submission not working
+        
         alert("Please check the captcha box to generate the lead");
+        event.preventDefault(); 
        
     }
 }
@@ -28,6 +30,7 @@ function timestamp() {
     }
 }
 setInterval(timestamp, 500);
+
 
 function captchasuccess() {
     captchachecked = true;
